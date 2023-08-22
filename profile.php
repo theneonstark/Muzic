@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    if(isset($_SESSION['u_email']) && isset($_SESSION['u_name'])){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -107,8 +112,8 @@
                         <i class='bx bxs-user-circle' ></i>
                     </div>
                     <div class="profile_info">
-                        <h4>StarK</h4>
-                        <p>Muzic: theadmin</p>
+                        <h4><?php echo $_SESSION['u_name'];?></h4>
+                        <p>Muzic: <?php echo $_SESSION['u_email'];?></p>
                     </div>
                     </div>
                     <div class="features">
@@ -162,3 +167,8 @@
     </main>
 </body>
 </html>
+<?php
+    }else{
+        header('location: login.php');
+    }
+?>

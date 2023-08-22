@@ -52,20 +52,18 @@
             if($sql_admin && $sql_user){
                 if($fetch_admin = mysqli_fetch_array($sql_admin)){
                     session_start();
+                    $_SESSION['a_name'] = $fetch_admin['name'];
                     $_SESSION['a_email'] = $fetch_admin['email'];
-                    $_SESSION['a_pass'] = $fetch_admin['pass'];
 
                     header('location:admin.php');
                 }else if($fetch_user = mysqli_fetch_array($sql_user)){
                     session_start();
+                    $_SESSION['u_name'] = $fetch_user['first_name'];
                     $_SESSION['u_email'] = $fetch_user['email'];
-                    $_SESSION['u_pass'] = $fetch_user['password'];
 
-                    header('location:sign up.php');
+                    header('location:index.php');
                 }else{
-                    echo "<script>
-                        if()
-                    </script>";
+                    header('location:sign up.php');
                 }
             }else{
                 echo 'wrong';
