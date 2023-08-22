@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="video">
+    <!-- <div class="video">
         <video autoplay loop muted>
             <source src="video/videobg.mp4" type="video/mp4">
         </video>
-    </div>
+    </div> -->
     <div class="form">
         <form action="" method="POST">
             <h1>Login</h1>
