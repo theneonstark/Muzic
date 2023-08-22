@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
+    border: none;
+    outline: none;
+    font-family: 'Tektur', cursive;
+}
+
+:root {
+    --bg-gradient: linear-gradient(to right, purple, gray);
+    --max-s: 10.2rem;
+    --avg-s: 3rem;
+    --min-s: 2rem;
+}
+
+html{
+    font-size: 50%;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+.admin h1{
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: var(--max-s);
+}
+
+.head{
+    color: #fff;
+    text-align: center;
+    font-size: var(--avg-s);
+    padding: var(--min-s) var(--avg-s);
+    width: 100%;
+    background-color: #c0c0c0;
+}
+
+.admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--min-s) var(--min-s);
+    background-color: #c0c0c0;
+}
+
+nav a {
+    margin-left: var(--avg-s);
+    font-size: var(--avg-s);
+}
+
+.user_head {
+    padding: 2rem 1rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: nowrap;
+}
+
+.user_head h3{
+    font-size: var(--avg-s);
+    color: #fff;
+    flex: 1 1 33.3rem;
+}
+
+.d_data {
+    padding: 0.7rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.d_data{
+    border: 0.125rem solid #000;
+    border-radius: 0.125rem;
+}
+
+.d_data .table_data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    flex: 1 1 33.3rem;
+    border-left: 0.15rem solid #c0c0c0;
+    padding-left: 1rem;
+}
+
+.table_data button{
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.table_data p {
+    font-size: var(--min-s);
+    color: #c0c0c0;
+}
+
+.upload form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background-color: aqua;
+}
+
+.upload form input{
+    width: 50%;
+    padding: 0.5rem 1.5rem;
+    font-size: var(--min-s);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.upload_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload_section label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image_section, .music_section{
+    text-align:center;
+    padding: 2rem;
+    font-size: var(--min-s);
+    border:thin solid black;
+}
+
+.upload_section i{
+    font-size: var(--avg-s);
+}
+
+.upload form input[type="file"]{
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+#image_details {
+    color: green;
+}
+
+#song_details{
+    color: green;
+}
