@@ -3,7 +3,7 @@ song = document.getElementById('Music');
 
 let imageTxt = document.getElementById('image_detail'),
 songtxt = document.getElementById('song_detail');
-console.log(image,song);
+// console.log(image,song);
 
 song = onchange = () => {
     let inputImage = document.getElementById('Image',).files[0];
@@ -17,34 +17,57 @@ song = onchange = () => {
 //         console.log(result[0].File_name);
 //     })
 
-let songIndex = 0;
-let music_card = Array.from(document.getElementsByClassName('grid_layout'));
+let songIndex,
+fetchIndex,
+imgIndex,
+dataIndex;
+let audio = new Audio();
+let player = document.getElementById('player_img');
+let player_prevbtn = document.getElementById('player_prevbtn');
+let player_playbtn = document.getElementById('player_playbtn');
+let player_nxtbtn = document.getElementById('player_nxtbtn');
 let music_details = document.querySelector('.sidebar_player .top h4');
-console.log(music_details);
+let music_card_btn = Array.from(document.querySelectorAll('.grid_layout .grid_img button'));
+let music_card_btn_icon = document.getElementById('cardplay_icon');
+
+player_playbtn.addEventListener("click", ()=>{
+    if(audio.paused){
+        audio.play();
+        player_playbtn.classList.remove("bx-play-circle");
+        player_playbtn.classList.add("bx-pause-circle");
+    }else{
+        audio.pause();
+        player_playbtn.classList.add("bx-play-circle");
+        player_playbtn.classList.remove("bx-pause-circle");
+
+    }
+})
+
+
+// console.log(music_card_btn);
 
 async function fetch_data(){
     const data = await fetch("http://localhost/Muzic/fetch.php");
     const name = await data.json();
-    name.forEach((element)=>{
-        console.log(element)
-    })
-    console.log(name)
-
-    const music_array = [];
-    for(let i in name){
-        music_array.push([i,name[i]])
-    }
-    console.log(music_array);
-    Array.from(document.querySelectorAll('.grid_layout i')).forEach((element)=>{
-        element = onclick = (e) =>{
-            songIndex = parseInt(e.target.id);
-            console.log(songIndex);
-            music_details.innerHTML = name[songIndex].Song_Name;
-            // console.log(music_array[0].Song_name);
-            
-        }
-        
-    })
+    music_card_btn.forEach((elem,index)=>{
+        elem.addEventListener("click", (e) => {
+            fetchIndex = name[index];
+            console.log(fetchIndex)
+            dataIndex = e.target = name[index].Song_name;
+            songIndex = e.target = name[index].File_name;
+            imgIndex = e.target = name[index].img_name;
+            // console.log(songIndex);
+            music_details.innerText = dataIndex;
+            player.src = `uploads/img/${imgIndex}`; 
+            audio.src = `uploads/song/${songIndex}`;
+            audio.play();
+            music_card_btn_icon.classList.remove("bx-play-circle");
+            music_card_btn_icon.classList.add("bx-pause-circle");
+            player_nxtbtn.classList.add("bx-pause-circle");
+            player_playbtn.classList.remove("bx-play-circle");
+            player_playbtn.classList.add("bx-pause-circle");
+    }); 
+})
 }
 
 fetch_data();

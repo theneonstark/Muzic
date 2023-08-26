@@ -83,12 +83,21 @@ body{
     align-items: center;
 }
 
-.sidebar .top{
+.sidebar_player .top{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.6rem;
     margin-bottom: var(--small-size);
+}
+
+.sidebar_player .top h4{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    height: 2rem;
+    width: 15rem;
 }
 
 .sidebar .middle{
