@@ -26,7 +26,7 @@ async function fetch_data(){
     const data = await fetch("http://localhost/Muzic/fetch.php");
     const name = await data.json();
     name.forEach((element)=>{
-        console.log(element.Song_name);
+        console.log(element)
     })
     console.log(name)
 
@@ -39,9 +39,7 @@ async function fetch_data(){
         element = onclick = (e) =>{
             songIndex = parseInt(e.target.id);
             console.log(songIndex);
-            music_details.innerHTML = name[songIndex] = name.forEach((element)=>{
-        console.log(element.Song_name);
-    });
+            music_details.innerHTML = name[songIndex].Song_Name;
             // console.log(music_array[0].Song_name);
             
         }
