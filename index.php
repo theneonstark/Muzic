@@ -90,7 +90,7 @@
     <div class="sidebar_player">
         <div class="top">
             <img src="img/pngegg.png" alt="">
-            <h4></h4>
+            <h4>Lorem, ipsum dolor.........</h4>
         </div>
         <div class="middle">
             <i class='bx bx-skip-previous'></i>
@@ -135,7 +135,7 @@
                 <div class="grid_layout">
                     <div class="grid_img">
                      <img src="Uploads\img\<?php echo $music_fetch['img_name']?>" alt="">
-                     <a href="#"><i class='bx bx-play-circle'></i></a>
+                     <i class='bx bx-play-circle' id="<?php echo $music_fetch['ID']?>"></i>
                     </div>
                     <h1><?php echo $music_fetch['Song_name']?></h1>
                     <h3><?php echo $music_fetch['Singer_name']?></h3>
@@ -210,5 +210,6 @@
             </section>
         </div>
     </main>
+    <script src="javascript/main.js"></script>
 </body>
 </html>
