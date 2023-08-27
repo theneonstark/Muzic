@@ -98,8 +98,8 @@
             <i class='bx bx-skip-next' id="player_nxtbtn"></i>
         </div>
         <div class="last">
-            <i class='bx bx-volume-full'></i>
-            <input type="range" value="0">
+            <i class='bx bx-volume-full' id="volume_icon"></i>
+            <input type="range" id="volume" min="0" max="100" value="100">
         </div>
     </div>
 </div>

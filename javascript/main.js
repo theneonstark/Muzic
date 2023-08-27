@@ -18,18 +18,20 @@ song = onchange = () => {
 //     })
 
 let main_index = 0,
-    songIndex,
-    fetchIndex,
-    imgIndex,
-    dataIndex;
-let audio = new Audio();
-let player = document.getElementById('player_img');
-let player_prevbtn = document.getElementById('player_prevbtn');
-let player_playbtn = document.getElementById('player_playbtn');
-let player_nxtbtn = document.getElementById('player_nxtbtn');
-let music_details = document.querySelector('.sidebar_player .top h4');
-let music_card_btn = Array.from(document.querySelectorAll('.grid_layout .grid_img'));
-let music_card_btn_icon = document.getElementById('cardplay_icon');
+songIndex,
+fetchIndex,
+imgIndex,
+dataIndex;
+const audio = new Audio();
+const player = document.getElementById('player_img');
+const player_prevbtn = document.getElementById('player_prevbtn');
+const player_playbtn = document.getElementById('player_playbtn');
+const player_nxtbtn = document.getElementById('player_nxtbtn');
+const music_details = document.querySelector('.sidebar_player .top h4');
+const music_card_btn = Array.from(document.querySelectorAll('.grid_layout .grid_img'));
+const music_card_btn_icon = document.getElementById('cardplay_icon');
+const volumeInput = document.getElementById('volume');
+const volumeIcon = document.getElementById('volume_icon');
 
 player_playbtn.addEventListener("click", () => {
     if (audio.paused) {
@@ -40,7 +42,7 @@ player_playbtn.addEventListener("click", () => {
         audio.pause();
         player_playbtn.classList.add("bx-play-circle");
         player_playbtn.classList.remove("bx-pause-circle");
-
+        
     }
 })
 
@@ -67,45 +69,63 @@ async function fetch_data() {
             player_playbtn.classList.remove("bx-play-circle");
             player_playbtn.classList.add("bx-pause-circle");
         });
-
-        player_nxtbtn.onclick = () => {
-            main_index++;
-            if (main_index >= name.length) {
-                main_index = 0;
-            }
-            nxt = name[main_index].Song_name;
-            nxt_file = name[main_index].File_name;
-            nxt_img = name[main_index].img_name;
-
-            music_details.innerText = nxt;
-            player.src = `uploads/img/${nxt_img}`;
-            audio.src = `uploads/song/${nxt_file}`;
-            audio.play();
-
-            player_playbtn.classList.remove("bx-play-circle");
-            player_playbtn.classList.add("bx-pause-circle");
-        };
-
-        player_prevbtn.onclick = () => {
-            if (main_index == 0) {
-                main_index = name.length-1;
-            }
-                        
-            nxt = name[main_index].Song_name;
-            nxt_file = name[main_index].File_name;
-            nxt_img = name[main_index].img_name;
-            
-            music_details.innerText = nxt;
-            player.src = `uploads/img/${nxt_img}`;
-            audio.src = `uploads/song/${nxt_file}`;
-            audio.play();
-            
-            player_playbtn.classList.remove("bx-play-circle");
-            player_playbtn.classList.add("bx-pause-circle");
-            main_index--;
-        };
-
+        
+        
     })
+    player_nxtbtn.onclick = () => {
+        main_index++;
+        if (main_index >= name.length) {
+            main_index = 0;
+        }
+        nxt = name[main_index].Song_name;
+        nxt_file = name[main_index].File_name;
+        nxt_img = name[main_index].img_name;
+        
+        music_details.innerText = nxt;
+        player.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
+        audio.play();
+        
+        player_playbtn.classList.remove("bx-play-circle");
+        player_playbtn.classList.add("bx-pause-circle");
+    };
+    
+    player_prevbtn.onclick = () => {
+        if (main_index == 0) {
+            main_index = name.length-1;
+        }
+        
+        nxt = name[main_index].Song_name;
+        nxt_file = name[main_index].File_name;
+        nxt_img = name[main_index].img_name;
+        
+        music_details.innerText = nxt;
+        player.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
+        audio.play();
+        
+        player_playbtn.classList.remove("bx-play-circle");
+        player_playbtn.classList.add("bx-pause-circle");
+        main_index--;
+    };
 }
+volumeInput.addEventListener('input', (event) => {
+    const volumeValue = volumeInput.value/100;
+    // console.log(volumeValue);
+    audio.volume = volumeValue;
+    if(volumeValue==0){
+        volumeIcon.classList.remove("bx-volume-full");
+        volumeIcon.classList.add("bx-volume-mute");
+    }else if(volumeValue<=0.3){
+        volumeIcon.classList.remove("bx-volume-mute");
+        volumeIcon.classList.add("bx-volume");
+    }else if(volumeValue<=0.6){
+        volumeIcon.classList.remove("bx-volume");
+        volumeIcon.classList.add("bx-volume-low");
+    }else{
+        volumeIcon.classList.remove("bx-volume-low");
+        volumeIcon.classList.add("bx-volume-full");
+    }
+});
 
 fetch_data();
