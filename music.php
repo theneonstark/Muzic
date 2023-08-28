@@ -88,20 +88,20 @@
             </ul>
         </div>
         <div class="sidebar_player">
-            <div class="top">
-                <img src="img/pngegg.png" alt="">
-                <h4>Lorem, ipsum dolor.........</h4>
-            </div>
-            <div class="middle">
-                <i class='bx bx-skip-previous'></i>
-                <i class='bx bx-play-circle'></i>
-                <i class='bx bx-skip-next'></i>
-            </div>
-            <div class="last">
-                <i class='bx bx-volume-full'></i>
-                <input type="range" value="0">
-            </div>
+        <div class="top">
+            <img src="img/pngegg.png" alt="Image Not Found" id="player_img">
+            <h4></h4>
         </div>
+        <div class="middle">
+            <i class='bx bx-skip-previous' id="player_prevbtn"></i>
+            <i class='bx bx-play-circle' id="player_playbtn"></i>
+            <i class='bx bx-skip-next' id="player_nxtbtn"></i>
+        </div>
+        <div class="last">
+            <i class='bx bx-volume-full' id="volume_icon"></i>
+            <input type="range" id="volume" min="0" max="100" value="100">
+        </div>
+    </div>
     </div>
     <main class="main">
         <div class="container">
@@ -112,8 +112,8 @@
                 ?>
                 <div class="grid_layout">
                     <div class="grid_img">
-                        <img src="Uploads\img\<?php echo $music_fetch['img_name']?>" alt="">
-                        <a href="#"><i class='bx bx-play-circle'></i></a>
+                     <img src="Uploads\img\<?php echo $music_fetch['img_name']?>" alt="">
+                     <button id="<?php echo $music_fetch['ID']?>" value="<?php echo $music_fetch['Song_name']?>"><i class='bx bx-play-circle' id="cardplay_icon"></i></button>
                     </div>
                     <h1><?php echo $music_fetch['Song_name']?></h1>
                     <h3><?php echo $music_fetch['Singer_name']?></h3>
@@ -163,6 +163,7 @@
             </section>
         </div>
     </main>
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>
