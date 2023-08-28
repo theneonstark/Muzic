@@ -21,19 +21,39 @@ let main_index = 0,
 songIndex,
 fetchIndex,
 imgIndex,
+singerIndex,
 dataIndex;
 const audio = new Audio();
 const player = document.getElementById('player_img');
+const wplayer = document.getElementById('wplayer_img');
 const player_prevbtn = document.getElementById('player_prevbtn');
 const player_playbtn = document.getElementById('player_playbtn');
 const player_nxtbtn = document.getElementById('player_nxtbtn');
+const wplayer_prevbtn = document.getElementById('wplayer_prevbtn');
+const wplayer_playbtn = document.getElementById('wplayer_playbtn');
+const wplayer_nxtbtn = document.getElementById('wplayer_nxtbtn');
 const music_details = document.querySelector('.sidebar_player .top h4');
+const wmusic_details = document.querySelector('.wide_music_container h1');
+const singer_name = document.querySelector('.wide_music_container h3');
 const music_card_btn = Array.from(document.querySelectorAll('.grid_layout .grid_img'));
 const music_card_btn_icon = document.getElementById('cardplay_icon');
 const volumeInput = document.getElementById('volume');
 const volumeIcon = document.getElementById('volume_icon');
 
 player_playbtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        player_playbtn.classList.remove("bx-play-circle");
+        player_playbtn.classList.add("bx-pause-circle");
+    } else {
+        audio.pause();
+        player_playbtn.classList.add("bx-play-circle");
+        player_playbtn.classList.remove("bx-pause-circle");
+        
+    }
+})
+
+wplayer_playbtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
         player_playbtn.classList.remove("bx-play-circle");
@@ -57,17 +77,23 @@ async function fetch_data() {
             fetchIndex = name.length;
             console.log(fetchIndex)
             dataIndex = e.target = name[index].Song_name;
+            singerIndex = e.target = name[index].Singer_name;
             songIndex = e.target = name[index].File_name;
             imgIndex = e.target = name[index].img_name;
             // console.log(songIndex);
             music_details.innerText = dataIndex;
+            wmusic_details.innerText = dataIndex;
+            singer_name.innerText = singerIndex;
             player.src = `uploads/img/${imgIndex}`;
+            wplayer.src = `uploads/img/${imgIndex}`;
             audio.src = `uploads/song/${songIndex}`;
             audio.play();
             music_card_btn_icon.classList.remove("bx-play-circle");
             music_card_btn_icon.classList.add("bx-pause-circle");
             player_playbtn.classList.remove("bx-play-circle");
+            wplayer_playbtn.classList.remove("bx-play-circle");
             player_playbtn.classList.add("bx-pause-circle");
+            wplayer_playbtn.classList.add("bx-pause-circle");
         });
         
         
@@ -129,3 +155,10 @@ volumeInput.addEventListener('input', (event) => {
 });
 
 fetch_data();
+
+let player_btn = document.getElementById('player_btn');
+let wideplayer = document.getElementById('player');
+
+player_btn.onclick = () => {
+    wideplayer.classList.toggle('show');
+}

@@ -28,7 +28,7 @@
 html{
     font-size: 50%;
     overflow-x: hidden;
-    transition: .8s ease;
+    transition: .2s ease;
 }
 
 body{
@@ -499,6 +499,111 @@ body{
     margin-left: var(--fore-size);
 }
 
+.wide_player{
+    min-height: 25vh;
+    min-width: 100%;
+    position: fixed;
+    z-index: 150;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    transform: translateY(100%);
+    display: none;
+}
+
+.show{
+    transform: translateY(-100%);
+}
+
+.player_btn_container{
+    display: flex;
+    justify-content: center;
+}
+
+.player_btn{
+    position: fixed;
+    z-index: 300;
+    bottom: 0rem;
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: var(--text-color);
+    display: none;
+}
+
+
+.player_btn i,
+.player_btn h1 {
+    font-size: var(--fs-sx);
+}
+
+.wide_player .main_container{
+    width: 100%;
+    gap: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: 0.8s ease;
+    background: var(--main-bg);
+    box-shadow: 2px 2px 15px #000;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    /* display: none; */
+}
+
+.wide_player .main_container .main_img{
+    width: 15rem;
+    height: auto;
+}
+
+.main_img img{
+    width: 100%;
+    height: auto;
+}
+
+.wide_player .wide_music_container{
+    width: 85rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: var(--main-size);
+}
+
+.wide_player .wide_music_container h1{
+    font-size: var(--fs-x);
+    font-weight: 900;
+}
+.wide_player .wide_music_container h3{
+    font-size: var(--fs-sm);    
+    font-weight: 600;
+}
+
+.wide_music_container .wide_player_control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wide_music_container input{
+    width: 100%;
+}
+
+.wide_music_container .wide_player_control i{
+    font-size: var(--fs-xl);
+}
+
+
+
 @media (max-width: 1200px){
     html{
         font-size: 40%;
@@ -548,6 +653,12 @@ body{
     }
     #logout_btn{
         display: block;
+    }
+    .wide_player{
+        display: block;
+    }
+    .player_btn{
+        display: flex;
     }
 }
 @media (max-width: 515px){
