@@ -110,6 +110,9 @@ async function fetch_data() {
         music_details.innerText = nxt;
         player.src = `uploads/img/${nxt_img}`;
         audio.src = `uploads/song/${nxt_file}`;
+        wmusic_details.innerText = nxt;
+        wplayer.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
         audio.play();
         
         player_playbtn.classList.remove("bx-play-circle");
@@ -127,6 +130,9 @@ async function fetch_data() {
         
         wmusic_details.innerText = nxt;
         wplayer.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
+        music_details.innerText = nxt;
+        player.src = `uploads/img/${nxt_img}`;
         audio.src = `uploads/song/${nxt_file}`;
         audio.play();
         
@@ -146,6 +152,9 @@ async function fetch_data() {
         music_details.innerText = nxt;
         player.src = `uploads/img/${nxt_img}`;
         audio.src = `uploads/song/${nxt_file}`;
+        wmusic_details.innerText = nxt;
+        wplayer.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
         audio.play();
         
         player_playbtn.classList.remove("bx-play-circle");
@@ -164,6 +173,9 @@ async function fetch_data() {
         
         wmusic_details.innerText = nxt;
         wplayer.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
+        music_details.innerText = nxt;
+        player.src = `uploads/img/${nxt_img}`;
         audio.src = `uploads/song/${nxt_file}`;
         audio.play();
         
