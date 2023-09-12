@@ -35,8 +35,8 @@ const wplayer_nxtbtn = document.getElementById('wplayer_nxtbtn');
 const music_details = document.querySelector('.sidebar_player .top h4');
 const wmusic_details = document.querySelector('.wide_music_container h1');
 const singer_name = document.querySelector('.wide_music_container h3');
-const music_card_btn = Array.from(document.querySelectorAll('.grid_layout .grid_img'));
-const music_card_btn_icon = document.getElementById('cardplay_icon');
+const music_card_btn = Array.from(document.querySelectorAll('.grid_layout .grid_img button'));
+const music_card_btn_play = document.querySelector('.grid_layout .grid_img button i')
 const volumeInput = document.getElementById('volume');
 const volumeIcon = document.getElementById('volume_icon');
 
@@ -56,16 +56,14 @@ player_playbtn.addEventListener("click", () => {
 wplayer_playbtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
-        player_playbtn.classList.remove("bx-play-circle");
+        wplayer_playbtn.classList.remove("bx-play-circle");
         player_playbtn.classList.add("bx-pause-circle");
     } else {
         audio.pause();
-        player_playbtn.classList.add("bx-play-circle");
-        player_playbtn.classList.remove("bx-pause-circle");
-        
+        wplayer_playbtn.classList.add("bx-play-circle");
+        player_playbtn.classList.remove("bx-pause-circle"); 
     }
 })
-
 
 // console.log(music_card_btn);
 
@@ -75,7 +73,8 @@ async function fetch_data() {
     music_card_btn.forEach((elem, index) => {
         elem.addEventListener("click", (e) => {
             fetchIndex = name.length;
-            console.log(fetchIndex)
+            classIndex = parseInt(e.target.id);
+            const idName = document.getElementById(classIndex);
             dataIndex = e.target = name[index].Song_name;
             singerIndex = e.target = name[index].Singer_name;
             songIndex = e.target = name[index].File_name;
@@ -88,8 +87,8 @@ async function fetch_data() {
             wplayer.src = `uploads/img/${imgIndex}`;
             audio.src = `uploads/song/${songIndex}`;
             audio.play();
-            music_card_btn_icon.classList.remove("bx-play-circle");
-            music_card_btn_icon.classList.add("bx-pause-circle");
+            idName.classList.remove("bx-play-circle");
+            idName.classList.add("bx-pause-circle");
             player_playbtn.classList.remove("bx-play-circle");
             wplayer_playbtn.classList.remove("bx-play-circle");
             player_playbtn.classList.add("bx-pause-circle");
@@ -98,6 +97,7 @@ async function fetch_data() {
         
         
     })
+
     player_nxtbtn.onclick = () => {
         main_index++;
         if (main_index >= name.length) {
@@ -114,6 +114,24 @@ async function fetch_data() {
         
         player_playbtn.classList.remove("bx-play-circle");
         player_playbtn.classList.add("bx-pause-circle");
+    };
+
+    wplayer_nxtbtn.onclick = () => {
+        main_index++;
+        if (main_index >= name.length) {
+            main_index = 0;
+        }
+        nxt = name[main_index].Song_name;
+        nxt_file = name[main_index].File_name;
+        nxt_img = name[main_index].img_name;
+        
+        wmusic_details.innerText = nxt;
+        wplayer.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
+        audio.play();
+        
+        wplayer_playbtn.classList.remove("bx-play-circle");
+        wplayer_playbtn.classList.add("bx-pause-circle");
     };
     
     player_prevbtn.onclick = () => {
@@ -132,6 +150,25 @@ async function fetch_data() {
         
         player_playbtn.classList.remove("bx-play-circle");
         player_playbtn.classList.add("bx-pause-circle");
+        main_index--;
+    };
+
+    wplayer_prevbtn.onclick = () => {
+        if (main_index == 0) {
+            main_index = name.length-1;
+        }
+        
+        nxt = name[main_index].Song_name;
+        nxt_file = name[main_index].File_name;
+        nxt_img = name[main_index].img_name;
+        
+        wmusic_details.innerText = nxt;
+        wplayer.src = `uploads/img/${nxt_img}`;
+        audio.src = `uploads/song/${nxt_file}`;
+        audio.play();
+        
+        wplayer_playbtn.classList.remove("bx-play-circle");
+        wplayer_playbtn.classList.add("bx-pause-circle");
         main_index--;
     };
 }

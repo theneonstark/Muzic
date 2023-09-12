@@ -135,7 +135,7 @@
                 <div class="grid_layout">
                     <div class="grid_img">
                      <img src="Uploads\img\<?php echo $music_fetch['img_name']?>" alt="">
-                     <button id="<?php echo $music_fetch['ID']?>" value="<?php echo $music_fetch['Song_name']?>"><i class='bx bx-play-circle' id="cardplay_icon"></i></button>
+                     <button value="<?php echo $music_fetch['Song_name']?>"><i class='bx bx-play-circle' id="<?php echo $music_fetch['ID']?>"></i></button>
                     </div>
                     <h1><?php echo $music_fetch['Song_name']?></h1>
                     <h3><?php echo $music_fetch['Singer_name']?></h3>
