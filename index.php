@@ -16,7 +16,7 @@
 <body>
    <header>
        <div class="head">
-           <img src="img/Apple_Music_logo.svg" alt="">
+           <img src="img/logo.png" alt="">
             <div class="mid_content">
                 <a href="profile.php">Profile</a>
                 <a href="about.php">About</a>
@@ -43,7 +43,7 @@
    </header>
    <div class="sidebar">
     <div class="logo">
-        <img src="img/Apple_Music_logo.svg" alt="">
+        <img src="img/logo.png" alt="">
     </div>
     <div class="sidebar_nav">
         <ul>
@@ -174,7 +174,7 @@
             <section class="footer">
                 <div class="footer_layout">
                     <div class="contact_layout f_layout">
-                        <img src="img/Apple_Music_logo.svg" alt="">
+                        <img src="img/logo.png" alt="">
                         <p>Record Label & Internet Radio, Online Music</p>
                         <p>admin@muzic.com</p>
                         <p>0 0000 000-0-0</p>
