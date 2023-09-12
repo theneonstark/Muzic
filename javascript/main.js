@@ -87,8 +87,8 @@ async function fetch_data() {
             wplayer.src = `uploads/img/${imgIndex}`;
             audio.src = `uploads/song/${songIndex}`;
             audio.play();
-            idName.classList.remove("bx-play-circle");
-            idName.classList.add("bx-pause-circle");
+            // idName.classList.remove("bx-play-circle");
+            // idName.classList.add("bx-pause-circle");
             player_playbtn.classList.remove("bx-play-circle");
             wplayer_playbtn.classList.remove("bx-play-circle");
             player_playbtn.classList.add("bx-pause-circle");
