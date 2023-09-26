@@ -55,7 +55,7 @@ body{
 .sidebar{
     display: flex;
     flex-direction: column;
-    padding: 4rem 0 var(--fore-size) var(--fore-size);
+    padding: 0 0 var(--fore-size) var(--fore-size);
     position: fixed;
     top: 0;
     left: 0;
@@ -63,7 +63,7 @@ body{
 }
 
 .sidebar ul{
-    margin-top: var(--fore-size);
+    /* margin-top: var(--fore-size); */
 }
 
 .sidebar ul li{
@@ -125,7 +125,7 @@ body{
 }
 
 .logo img{
-    height: 30px;
+    height: 70px;
     width: auto;
 }
 
@@ -485,6 +485,11 @@ body{
 
 .contact_layout {
     margin-right: var(--fore-size);
+}
+
+.contact_layout img{
+    width: 40rem;
+    height: auto;
 }
 
 .footer_layout h1{
