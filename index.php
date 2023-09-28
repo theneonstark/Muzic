@@ -175,36 +175,36 @@
                 <div class="footer_layout">
                     <div class="contact_layout f_layout">
                         <img src="img/logo.png" alt="">
-                        <p>Record Label & Internet Radio, Online Music</p>
+                        <p>Non Music Label & Online Muzic</p>
                         <p>admin@muzic.com</p>
                         <p>0 0000 000-0-0</p>
                     </div>
                     <div class="Brand_layout f_layout">
                         <h1>Brand</h1>
-                        <p>ABout</p>
-                        <p>Profile</p>
-                        <p>Pricing</p>
-                        <p>Contact</p>
+                        <a href="about.php">About</a>
+                        <a href="">Profile</a>
+                        <a href="">Pricing</a>
+                        <a href="">Contact</a>
                     </div>
                     <div class="Browser_layout f_layout">
                         <h1>Browser</h1>
-                        <p>Artist</p>
-                        <p>Releases</p>
-                        <p>Event</p>
-                        <p>Prodcast</p>
+                        <a href="">Artist</a>
+                        <a href="">Releases</a>
+                        <a href="">Event</a>
+                        <a href="">Prodcast</a>
                     </div>
                     <div class="Browser_layout_right f_layout">
-                        <p></p>
-                        <p>News</p>
-                        <p>Store</p>
-                        <p>Video</p>
+                        <a href=""></a>
+                        <a href="">News</a>
+                        <a href="">Store</a>
+                        <a href="">Video</a>
                     </div>
                     <div class="Help_layout f_layout">
                         <h1>Help</h1>
-                        <p>Account & Billing</p>
-                        <p>Plan & Pricing</p>
-                        <p>Support</p>
-                        <p>Accessibility</p>
+                        <a href="">Account & Billing</a>
+                        <a href="">Plan & Pricing</a>
+                        <a href="">Support</a>
+                        <a href="">Accessibility</a>
                     </div>
                 </div>
             </section>

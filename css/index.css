@@ -470,6 +470,20 @@ body{
     font-size: var(--fs-sm);
 }
 
+.about_bar h1{
+    font-size: var(--fs-xl);
+    padding-bottom: var(--main-size);
+}
+
+.about_bar p{
+    font-size: 2rem;
+    padding-bottom: var(--small-size);
+}
+
+.about_bar p span{
+    font-weight: 600;
+}
+
 .footer{
     width: 100%;
     /* background-color: #000; */
@@ -496,7 +510,7 @@ body{
     font-size: var(--fs-sml);
 }
 
-.footer_layout p{
+.footer_layout a, .footer_layout p{
     font-size: var(--fs-sm);
 }
 

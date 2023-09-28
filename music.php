@@ -43,7 +43,7 @@
     </header>
     <div class="sidebar">
         <div class="logo">
-            <img src="img/Apple_Music_logo.svg" alt="">
+            <img src="img/logo.png" alt="">
         </div>
         <div class="sidebar_nav">
             <ul>
@@ -127,8 +127,8 @@
             <section class="footer">
                 <div class="footer_layout">
                     <div class="contact_layout f_layout">
-                        <img src="img/Apple_Music_logo.svg" alt="">
-                        <p>Record Label & Internet Radio, Online Music</p>
+                        <img src="img/logo.png" alt="">
+                        <p>Non Music Label & Online Muzic</p>
                         <p>admin@muzic.com</p>
                         <p>0 0000 000-0-0</p>
                     </div>
@@ -163,6 +163,29 @@
             </section>
         </div>
     </main>
+    <div class="player_btn_container">
+    <div class="player_btn" id="player_btn">
+        <i class='bx bx-music'></i>
+        <h1>Player</h1>
+    </div>
+    </div>
+    <div class="wide_player" >
+        <div class="main_container" id="player">
+            <div class="main_img">
+                <img src="img/pngegg.png" alt="Image Not Found" id="wplayer_img">
+            </div>
+            <div class="wide_music_container">
+                <h1></h1>
+                <h3></h3>
+                <div class="wide_player_control">
+                    <i class='bx bx-skip-previous'id="wplayer_prevbtn"></i>
+                    <i class='bx bx-play-circle' id="wplayer_playbtn"></i>
+                    <i class='bx bx-skip-next' id="wplayer_nxtbtn"></i>
+                </div>
+                <input type="range">
+            </div>
+        </div>
+    </div>
     <script src="javascript/main.js"></script>
 </body>
 
