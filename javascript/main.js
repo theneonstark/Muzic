@@ -211,3 +211,42 @@ let wideplayer = document.getElementById('player');
 player_btn.onclick = () => {
     wideplayer.classList.toggle('show');
 }
+
+const slider = document.querySelector('.mainslider');
+const nxt_btn = document.getElementById('next');
+const prv_btn = document.getElementById('prev');
+let slides = document.querySelectorAll('.slider');
+let index = 1;
+
+const first_clone = slides[0].cloneNode(true);
+const last_clone = slides[slides.length-1].cloneNode(true);
+
+first_clone.id = 'fclone';
+last_clone.id = 'lclone';
+
+slider.append(first_clone);
+slider.prepend(last_clone);
+
+const slidewidth = slides[index].clientWidth;
+console.log(first_clone.id)
+
+slider.style.transform =`translateX(${-slidewidth*index}px)`;
+
+const start = () => {
+    setInterval(()=>{
+        index++;
+        slider.style.transform =`translateX(${-slidewidth*index}px)`;
+        slider.style.transition = '.2s';
+        console.log(slidewidth)
+    }, 2000);
+    
+    slider.addEventListener('transitionend',()=>{
+        if(slides[index].id === first_clone.id){
+            index = 1;
+        }
+    })
+}
+console.log(slides[index].id === last_clone.id)
+console.log(slides)
+
+// start();
