@@ -105,24 +105,26 @@
 </div>
 <main class="main">
     <div class="container">
-    <div class="mainslider">
-        <div class="slider" style="background: url('img/img 1.jpg');">
-            <div class="slider_content">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="buttons">
-                    <a href="#">LISTEN</a>
-                    <a href="#">LEARN MORE</a>
+    <div class="slider_container">
+        <div class="mainslider">
+            <div class="slider" style="background: url('img/img 1.jpg');">
+                <div class="slider_content">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="buttons">
+                        <a href="#">LISTEN</a>
+                        <a href="#">LEARN MORE</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="slider" style="background: url('img/logo.png');">
-            <div class="slider_content">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="buttons">
-                    <a href="#">EXPLORE</a>
-                    <a href="#">LISTEN MORE</a>
+            <div class="slider" style="background: url('img/logo.png');">
+                <div class="slider_content">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="buttons">
+                        <a href="#">EXPLORE</a>
+                        <a href="#">LISTEN MORE</a>
+                    </div>
                 </div>
             </div>
         </div>

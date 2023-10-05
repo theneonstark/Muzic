@@ -27,7 +27,7 @@
 
 html{
     font-size: 50%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     transition: .2s ease;
 }
 
@@ -205,10 +205,17 @@ body{
     height: 70vh;
 }
 
+.slider_container{
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
 .mainslider{
     width: 100%;
     height: 70vh;
     display: flex;
+    /* overflow: hidden; */
 }
 
 .slider {
@@ -216,7 +223,7 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 4rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 

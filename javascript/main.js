@@ -233,20 +233,23 @@ console.log(first_clone.id)
 slider.style.transform =`translateX(${-slidewidth*index}px)`;
 
 const start = () => {
-    setInterval(()=>{
+    let slider_slides = setInterval(()=>{
         index++;
         slider.style.transform =`translateX(${-slidewidth*index}px)`;
-        slider.style.transition = '.2s';
+        slider.style.transition = '.7s';
         console.log(slidewidth)
-    }, 2000);
+    }, 4000);
     
     slider.addEventListener('transitionend',()=>{
+        let slides = document.querySelectorAll('.slider');
         if(slides[index].id === first_clone.id){
+            slider.style.transition = 'none';
             index = 1;
+            slider.style.transform =`translateX(${-slidewidth*index}px)`;
         }
-    })
+    });
 }
 console.log(slides[index].id === last_clone.id)
 console.log(slides)
 
-// start();
+start();
