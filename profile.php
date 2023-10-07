@@ -9,9 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Profile <?php echo $_SESSION['u_name']?></title>
     <link rel="stylesheet" href="css/index.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -53,7 +52,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="artish.php">
                         <i class='bx bx-user-voice'></i>
                         Artist
                     </a>

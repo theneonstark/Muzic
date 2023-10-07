@@ -35,8 +35,6 @@ if (isset($_SESSION['a_email'])) {
         <title>Admin Artist</title>
         <style>
             @import url('css/adminstyle.css');
-            @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
-            @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
         </style>
     </head>
 

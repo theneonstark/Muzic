@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@
     --min-s: 2rem;
 }
 
-html{
+html {
     font-size: 50%;
 }
 
@@ -24,14 +26,14 @@ body {
     background-color: #1a1a1a;
 }
 
-.admin h1{
+.admin h1 {
     background: var(--bg-gradient);
     -webkit-background-clip: text;
     color: transparent;
     font-size: var(--max-s);
 }
 
-.head{
+.head {
     color: #fff;
     text-align: center;
     font-size: var(--avg-s);
@@ -71,7 +73,7 @@ nav a {
     flex: nowrap;
 }
 
-.user_head h3{
+.user_head h3 {
     font-size: var(--avg-s);
     color: #fff;
     flex: 1 1 33.3rem;
@@ -85,12 +87,12 @@ nav a {
     flex-wrap: nowrap;
 }
 
-.d_data{
+.d_data {
     border: 0.125rem solid #000;
     border-radius: 0.125rem;
 }
 
-.d_data .table_data{
+.d_data .table_data {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +102,7 @@ nav a {
     padding-left: 1rem;
 }
 
-.table_data button{
+.table_data button {
     padding: 0.5rem 1.5rem;
     border-radius: 0.25rem;
 }
@@ -110,7 +112,7 @@ nav a {
     color: #c0c0c0;
 }
 
-.upload form{
+.upload form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,7 +122,7 @@ nav a {
     background-color: aqua;
 }
 
-.upload form input{
+.upload form input {
     width: 50%;
     padding: 0.5rem 1.5rem;
     font-size: var(--min-s);
@@ -135,24 +137,25 @@ nav a {
     align-items: center;
 }
 
-.upload_section label{
+.upload_section label {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.image_section, .music_section{
-    text-align:center;
+.image_section,
+.music_section {
+    text-align: center;
     padding: 2rem;
     font-size: var(--min-s);
-    border:thin solid black;
+    border: thin solid black;
 }
 
-.upload_section i{
+.upload_section i {
     font-size: var(--avg-s);
 }
 
-.upload form input[type="file"]{
+.upload form input[type="file"] {
     display: none;
 }
 
@@ -164,6 +167,6 @@ label {
     color: green;
 }
 
-#song_details{
+#song_details {
     color: green;
 }
