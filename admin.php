@@ -18,6 +18,7 @@
         <a href="adminmusic.php">Music</a>
         <a href="adminartist.php">Artist</a>
         <a href="adminpost.php">Post</a>
+        <a href="adminbanner.php">Banner</a>
         <a href="logout.php"><i class='bx bx-power-off'></i></a>
     </nav>
     <section>

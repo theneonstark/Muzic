@@ -212,11 +212,13 @@ player_btn.onclick = () => {
     wideplayer.classList.toggle('show');
 }
 
+const container = document.querySelector('.slider_container');
 const slider = document.querySelector('.mainslider');
 const nxt_btn = document.getElementById('next');
 const prv_btn = document.getElementById('prev');
 let slides = document.querySelectorAll('.slider');
 let index = 1;
+let slider_slides;
 
 const first_clone = slides[0].cloneNode(true);
 const last_clone = slides[slides.length-1].cloneNode(true);
@@ -228,28 +230,54 @@ slider.append(first_clone);
 slider.prepend(last_clone);
 
 const slidewidth = slides[index].clientWidth;
-console.log(first_clone.id)
-
 slider.style.transform =`translateX(${-slidewidth*index}px)`;
 
 const start = () => {
-    let slider_slides = setInterval(()=>{
+   slider_slides = setInterval(()=>{
+        nxtslide();
+        console.log(slidewidth)
+    }, 2000);
+}
+
+slider.addEventListener('transitionend',()=>{
+    let slides = document.querySelectorAll('.slider');
+    if(slides[index].id === first_clone.id){
+        slider.style.transition = 'none';
+        index = 1;
+        slider.style.transform =`translateX(${-slidewidth*index}px)`;
+    }
+
+    if(slides[index].id === last_clone.id){
+        slider.style.transition = 'none';
+        index = slides.length - 1;
+        slider.style.transform =`translateX(${-slidewidth*index}px)`;
+    }
+});
+
+const nxtslide = () => {
+    let slides = document.querySelectorAll('.slider');
+    if (index >= slides.length - 1) return;
         index++;
         slider.style.transform =`translateX(${-slidewidth*index}px)`;
         slider.style.transition = '.7s';
-        console.log(slidewidth)
-    }, 4000);
-    
-    slider.addEventListener('transitionend',()=>{
-        let slides = document.querySelectorAll('.slider');
-        if(slides[index].id === first_clone.id){
-            slider.style.transition = 'none';
-            index = 1;
-            slider.style.transform =`translateX(${-slidewidth*index}px)`;
-        }
-    });
 }
-console.log(slides[index].id === last_clone.id)
-console.log(slides)
+
+const prevslide = () => {
+    let slides = document.querySelectorAll('.slider');
+    if (index <= 0) return;
+    index--;
+        slider.style.transform =`translateX(${-slidewidth*index}px)`;
+        slider.style.transition = '.7s';
+}
+
+container.addEventListener('mouseenter', ()=>{
+    clearInterval(slider_slides);
+    console.log('hello')
+})
+
+container.addEventListener('mouseleave', start);
+
+nxt_btn.addEventListener('click', nxtslide);
+prv_btn.addEventListener('click', prevslide);
 
 start();
