@@ -3,6 +3,7 @@
     $con = mysqli_connect('localhost','root','','users');
     $query = mysqli_query($con, "select * from musics_data");
     $artist_query = mysqli_query($con, "select * from artist_data");
+    $banner_query = mysqli_query($con, "select * from banner");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,26 +107,22 @@
     <div class="container">
     <div class="slider_container">
         <div class="mainslider">
-            <div class="slider" style="background: url('img/img 1.jpg');">
+        <?php
+        while ($b_row = mysqli_fetch_array($banner_query)) {
+        ?>
+            <div class="slider" style="background: url('Uploads/banner/<?php echo $b_row["banner_img"]?>'); background-size:cover;">
                 <div class="slider_content">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <h1><?php echo $b_row['Header']?></h1>
+                    <p><?php echo $b_row['Details']?></p>
                     <div class="buttons">
-                        <a href="#">LISTEN</a>
-                        <a href="#">LEARN MORE</a>
+                        <a href="#"><?php echo $b_row['f_btn']?></a>
+                        <a href="#"><?php echo $b_row['s_btn']?></a>
                     </div>
                 </div>
             </div>
-            <div class="slider" style="background: url('img/logo.png');">
-                <div class="slider_content">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    <div class="buttons">
-                        <a href="#">EXPLORE</a>
-                        <a href="#">LISTEN MORE</a>
-                    </div>
-                </div>
-            </div>
+                <?php
+                    }
+                ?>
         </div>
     </div>
         <div class="icon">

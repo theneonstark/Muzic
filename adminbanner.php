@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $con = mysqli_connect("localhost","root","","users");
     if(isset($_SESSION['a_email'])){
         if(isset($_POST['b_sub'])){
             $b_head = $_POST['b_head'];
@@ -11,6 +12,8 @@
                 $f_tname = $_FILES['b_files']['tmp_name'];
                 move_uploaded_file($f_tname, "Uploads\banner/". $f_name);
             }
+
+            mysqli_query($con, "INSERT INTO banner (Header, Details,f_btn,s_btn,banner_img) VALUES ('$b_head', '$b_des', '$f_btn', '$s_btn','$f_name')");
             
         }
 ?>
@@ -44,7 +47,7 @@
                         <label for="Image">
                             Select Image
                             <i class='bx bx-image' ></i>
-        <input type="file" name="b_files" accept="image/jpeg, image/png" required />
+        <input type="file" name="b_files" id="Image" accept="image/jpeg, image/png" required />
         <span id="image_detail"></span>
                         </label>
         </div>
@@ -59,55 +62,49 @@
             <h3>First Button</h3>
             <h3>Second Button</h3>
             <h3>Img Name</h3>
-            <h3>Img Type</h3>
             <h3>Access</h3>
         </div>
         </section>
 
         <section class="data" id="data">
             <?php
-            $music_data = mysqli_query($con, "select *  from musics_data");
+            $music_data = mysqli_query($con, "select *  from banner");
             while ($m_data = mysqli_fetch_array($music_data)) {
                 ?>
                 <div class="d_data">
                     <div class="table_data">
                         <p>
-                            <?php echo $m_data['ID'] ?>
+                            <?php echo $m_data['id'] ?>
                         </p>
                     </div>
                     <div class="table_data">
                         <p>
-                            <?php echo $m_data['File_name'] ?>
+                            <?php echo $m_data['Header'] ?>
                         </p>
                     </div>
                     <div class="table_data">
                         <p>
-                            <?php echo $m_data['type'] ?>
+                            <?php echo $m_data['Details'] ?>
                         </p>
                     </div>
                     <div class="table_data">
                         <p>
-                            <?php echo $m_data['Song_name'] ?>
+                            <?php echo $m_data['f_btn'] ?>
                         </p>
                     </div>
                     <div class="table_data">
                         <p>
-                            <?php echo $m_data['Singer_name'] ?>
+                            <?php echo $m_data['s_btn'] ?>
                         </p>
                     </div>
                     <div class="table_data">
                         <p>
-                            <?php echo $m_data['img_name'] ?>
-                        </p>
-                    </div>
-                    <div class="table_data">
-                        <p>
-                            <?php echo $m_data['img_type'] ?>
+                            <?php echo $m_data['banner_img'] ?>
                         </p>
                     </div>
                     <div class="table_data">
                         <form action="" method="POST">
-                            <button type="submit" value="<?php echo $m_data['ID'] ?>" name="del">Delete</button>
+                            <button type="submit" value="<?php echo $m_data['id'] ?>" name="del">Delete</button>
                         </form>
                     </div>
                 </div>
