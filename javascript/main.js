@@ -70,6 +70,7 @@ wplayer_playbtn.addEventListener("click", () => {
 async function fetch_data() {
     const data = await fetch("http://localhost/Muzic/fetch.php");
     const name = await data.json();
+    console.log(name)
     music_card_btn.forEach((elem, index) => {
         elem.addEventListener("click", (e) => {
             fetchIndex = name.length;
@@ -83,9 +84,9 @@ async function fetch_data() {
             music_details.innerText = dataIndex;
             wmusic_details.innerText = dataIndex;
             singer_name.innerText = singerIndex;
-            player.src = `uploads/img/${imgIndex}`;
-            wplayer.src = `uploads/img/${imgIndex}`;
-            audio.src = `uploads/song/${songIndex}`;
+            player.src = `Uploads/img/${imgIndex}`;
+            wplayer.src = `Uploads/img/${imgIndex}`;
+            audio.src = `Uploads/song/${songIndex}`;
             audio.play();
             // idName.classList.remove("bx-play-circle");
             // idName.classList.add("bx-pause-circle");
@@ -108,11 +109,11 @@ async function fetch_data() {
         nxt_img = name[main_index].img_name;
         
         music_details.innerText = nxt;
-        player.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        player.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         wmusic_details.innerText = nxt;
-        wplayer.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        wplayer.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         audio.play();
         
         player_playbtn.classList.remove("bx-play-circle");
@@ -129,11 +130,11 @@ async function fetch_data() {
         nxt_img = name[main_index].img_name;
         
         wmusic_details.innerText = nxt;
-        wplayer.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        wplayer.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         music_details.innerText = nxt;
-        player.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        player.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         audio.play();
         
         wplayer_playbtn.classList.remove("bx-play-circle");
@@ -150,11 +151,11 @@ async function fetch_data() {
         nxt_img = name[main_index].img_name;
         
         music_details.innerText = nxt;
-        player.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        player.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         wmusic_details.innerText = nxt;
-        wplayer.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        wplayer.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         audio.play();
         
         player_playbtn.classList.remove("bx-play-circle");
@@ -172,11 +173,11 @@ async function fetch_data() {
         nxt_img = name[main_index].img_name;
         
         wmusic_details.innerText = nxt;
-        wplayer.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        wplayer.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         music_details.innerText = nxt;
-        player.src = `uploads/img/${nxt_img}`;
-        audio.src = `uploads/song/${nxt_file}`;
+        player.src = `Uploads/img/${nxt_img}`;
+        audio.src = `Uploads/song/${nxt_file}`;
         audio.play();
         
         wplayer_playbtn.classList.remove("bx-play-circle");
