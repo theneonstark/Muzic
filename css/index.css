@@ -63,10 +63,6 @@ body {
     bottom: 0;
 }
 
-.sidebar ul {
-    /* margin-top: var(--fore-size); */
-}
-
 .sidebar ul li {
     list-style: none;
     padding-top: var(--fore-size);
@@ -528,6 +524,7 @@ textarea {
 
 .f_layout {
     margin-left: var(--fore-size);
+    cursor:pointer;
 }
 
 .wide_player {

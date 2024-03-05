@@ -41,7 +41,7 @@
     </header>
     <div class="sidebar">
         <div class="logo">
-            <img src="img/Apple_Music_logo.svg" alt="">
+            <img src="img/logo.png" alt="">
         </div>
         <div class="sidebar_nav">
             <ul>
@@ -128,37 +128,30 @@
             <section class="footer">
                 <div class="footer_layout">
                     <div class="contact_layout f_layout">
-                        <img src="img/Apple_Music_logo.svg" alt="">
-                        <p>Record Label & Internet Radio, Online Music</p>
+                        <img src="img/logo.png" alt="">
+                        <p>Non Music Label & Online Muzic</p>
                         <p>admin@muzic.com</p>
                         <p>0 0000 000-0-0</p>
                     </div>
                     <div class="Brand_layout f_layout">
                         <h1>Brand</h1>
-                        <p>ABout</p>
-                        <p>Profile</p>
-                        <p>Pricing</p>
-                        <p>Contact</p>
+                        <p class="link">About</p>
+                        <p class="link">Profile</p>
+                        <p class="link">Pricing</p>
+                        <p class="link">Contact</p>
                     </div>
                     <div class="Browser_layout f_layout">
                         <h1>Browser</h1>
-                        <p>Artist</p>
-                        <p>Releases</p>
-                        <p>Event</p>
-                        <p>Prodcast</p>
+                        <p class="link">Artist</p>
+                        <p class="link">Releases</p>
+                        <p class="link">Event</p>
+                        <p class="link">Prodcast</p>
                     </div>
                     <div class="Browser_layout_right f_layout">
                         <p></p>
-                        <p>News</p>
-                        <p>Store</p>
-                        <p>Video</p>
-                    </div>
-                    <div class="Help_layout f_layout">
-                        <h1>Help</h1>
-                        <p>Account & Billing</p>
-                        <p>Plan & Pricing</p>
-                        <p>Support</p>
-                        <p>Accessibility</p>
+                        <p class="link">News</p>
+                        <p class="link">Store</p>
+                        <p class="link">Video</p>
                     </div>
                 </div>
             </section>
@@ -168,6 +161,6 @@
 </html>
 <?php
     }else{
-        header('location: login.php');
+        header('location: loginprofile.php');
     }
 ?>

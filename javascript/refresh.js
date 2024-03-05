@@ -8,15 +8,15 @@ $(document).ready(function(){
             const link_name = link.innerText.toString().toLowerCase(); 
             console.log(link_name)
             if(elem.id == ids){
-                alert('again')
                 $.ajax({
-                    url: `${link_name}.php`,
+                    url: `${link_name}php`,
                     success: function(res){
                         $('main').html(res);
+                    },
+                    error: function(data) {
+                        console.log('Error');
                     }
                 })
-                }else{
-                    alert('no')
                 }
         })
     })
