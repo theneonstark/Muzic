@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUZIC</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
    <header>
@@ -209,13 +210,6 @@
                         <p class="link">Store</p>
                         <p class="link">Video</p>
                     </div>
-                    <div class="Help_layout f_layout">
-                        <h1>Help</h1>
-                        <p class="link">Account & Billing</p>
-                        <p class="link">Plan & Pricing</p>
-                        <p class="link">Support</p>
-                        <p class="link">Accessibility</p>
-                    </div>
                 </div>
             </section>
         </div>
@@ -245,25 +239,6 @@
     </div>
     
     <script src="javascript/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function(){
-            const links = document.querySelectorAll('.link');
-            links.forEach(function(elem,idx){
-                elem.addEventListener('click',(e)=>{
-                    console.log(e.target);
-                    
-                })
-            })
-            // $('.f_layout p').click(function(){
-            //     $.ajax({
-            //         url: "about.php",
-            //         success: function(res){
-            //             $('main').html(res);
-            //         }
-            //     })
-            // })
-        })
-    </script>
+    <script src="javascript/refresh.js"></script>
 </body>
 </html>

@@ -1,14 +1,15 @@
 <?php
     session_start();
     $con = mysqli_connect('localhost','root','','users');
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -58,34 +59,28 @@
                     </div>
                     <div class="Brand_layout f_layout">
                         <h1>Brand</h1>
-                        <p>About</p>
-                        <p>Profile</p>
-                        <p>Pricing</p>
-                        <p>Contact</p>
+                        <p class="link">About</p>
+                        <p class="link">Profile</p>
+                        <p class="link">Pricing</p>
+                        <p class="link">Contact</p>
                     </div>
                     <div class="Browser_layout f_layout">
                         <h1>Browser</h1>
-                        <p>Artist</p>
-                        <p>Releases</p>
-                        <p>Event</p>
-                        <p>Prodcast</p>
+                        <p class="link">Artist</p>
+                        <p class="link">Releases</p>
+                        <p class="link">Event</p>
+                        <p class="link">Prodcast</p>
                     </div>
                     <div class="Browser_layout_right f_layout">
                         <p></p>
-                        <p>News</p>
-                        <p>Store</p>
-                        <p>Video</p>
-                    </div>
-                    <div class="Help_layout f_layout">
-                        <h1>Help</h1>
-                        <p>Account & Billing</p>
-                        <p>Plan & Pricing</p>
-                        <p>Support</p>
-                        <p>Accessibility</p>
+                        <p class="link">News</p>
+                        <p class="link">Store</p>
+                        <p class="link">Video</p>
                     </div>
                 </div>
             </section>
         </div>
+    <script src="javascript/refresh.js"></script>
 </body>
 
 </html>

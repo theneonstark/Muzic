@@ -160,6 +160,7 @@
             </section>
         </div>
     </main>
+    <script src="javascript/refresh.js"></script>
 </body>
 
 </html>
