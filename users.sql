@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2023 at 08:15 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Mar 05, 2024 at 10:02 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -64,6 +64,29 @@ INSERT INTO `artist_data` (`A_ID`, `artist_name`, `artist_img_name`, `artist_img
 (1, 'Arman Malik', 'Photo at sector 1285664.jpg', 'image/jpeg'),
 (2, 'Sonu Nigam', 'Photo at sector 1384384.jpg', 'image/jpeg'),
 (4, 'B Praak', 'bpraak.jpg', 'image/jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banner`
+--
+
+CREATE TABLE `banner` (
+  `id` int(11) NOT NULL,
+  `Header` varchar(100) NOT NULL,
+  `Details` varchar(100) NOT NULL,
+  `f_btn` varchar(100) NOT NULL,
+  `s_btn` varchar(100) NOT NULL,
+  `banner_img` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `banner`
+--
+
+INSERT INTO `banner` (`id`, `Header`, `Details`, `f_btn`, `s_btn`, `banner_img`) VALUES
+(1, 'Latest Song', 'Top 50 latest songs', 'Check it', 'Listen Now', 'dil-lauta-do-jubin-nautiyal.jpg'),
+(2, 'Top 20', 'Crazy top songs!!', 'Listen Now', 'Check It', 'Natu Natu.jpg');
 
 -- --------------------------------------------------------
 
@@ -135,6 +158,12 @@ ALTER TABLE `artist_data`
   ADD UNIQUE KEY `ID` (`A_ID`);
 
 --
+-- Indexes for table `banner`
+--
+ALTER TABLE `banner`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `musics_data`
 --
 ALTER TABLE `musics_data`
@@ -163,6 +192,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `artist_data`
   MODIFY `A_ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `banner`
+--
+ALTER TABLE `banner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `musics_data`
