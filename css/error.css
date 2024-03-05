@@ -1,34 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
 
-/*======================
-    404 page
-=======================*/
-
-
-.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+.back_to_home{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.page-wrapper {
+  width: 246px;
+  position: relative;
 }
 
-.page_404  img{ width:100%;}
+.disk-wrapper {
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+.disk-wrapper .light-left,
+.disk-wrapper .light-right {
+  width: 25%;
+  height: 30%;
+  position: absolute;
+  background-color: #615951;
+  z-index: 20;
+}
+.disk-wrapper .light-left {
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+  -webkit-clip-path: polygon(0 0, 100% 0, 66% 100%, 40% 100%);
+          clip-path: polygon(0 0, 100% 0, 66% 100%, 40% 100%);
+}
+.disk-wrapper .light-right {
+  -webkit-clip-path: polygon(40% 0, 66% 0, 100% 100%, 0 100%);
+          clip-path: polygon(40% 0, 66% 0, 100% 100%, 0 100%);
+  right: 20px;
+  bottom: 20px;
+  transform: rotate(-45deg);
+}
 
-.four_zero_four_bg{
- 
- background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
-    background-position: center;
- }
- 
- 
- .four_zero_four_bg h1{
- font-size:80px;
- }
- 
-  .four_zero_four_bg h3{
-			 font-size:80px;
-			 }
-			 
-			 .link_404{			 
-	color: #fff!important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;}
-	.contant_box_404{ margin-top:-50px;}
+.disk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: #050608;
+  border-radius: 100%;
+  position: relative;
+  animation: circle 2.5s infinite linear;
+}
+.disk .half-circle-top {
+  top: 30px;
+  border: 2px solid rgba(97, 89, 81, 0.1294117647);
+  border-top-left-radius: 72px; /* 100px of height + 10px of border */
+  border-top-right-radius: 72px; /* 100px of height + 10px of border */
+  border-bottom: 0;
+}
+.disk .half-circle-bottom {
+  bottom: 30px;
+  border: 2px solid rgba(97, 89, 81, 0.1294117647);
+  border-bottom-left-radius: 72px; /* 100px of height + 10px of border */
+  border-bottom-right-radius: 72px; /* 100px of height + 10px of border */
+  border-top: 0;
+}
+.disk .half-circle-bottom,
+.disk .half-circle-top {
+  width: 140px;
+  height: 70px;
+  position: absolute;
+  background-color: #050608;
+}
+.disk .separator {
+  background-color: #050608;
+  position: absolute;
+  width: 100%;
+  height: 58px;
+  top: 36%;
+}
+.disk .inner-circle {
+  width: 90px;
+  height: 90px;
+  background-color: #ef7d08;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.disk .inner-circle span {
+  color: #c13017;
+  font-weight: 900;
+  font-size: 25px;
+}
+.disk .inner-circle .dot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 100%;
+  margin: 5px;
+}
+
+.needle-wrapper {
+  position: absolute;
+  right: 0;
+}
+.needle-wrapper .base {
+  width: 30px;
+  height: 30px;
+  background-color: #d2ccc6;
+  position: relative;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.needle-wrapper .base:after {
+  content: "";
+  border-radius: 100%;
+  background-color: #615951;
+  width: 20px;
+  height: 20px;
+}
+.needle-wrapper .lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 4;
+  position: relative;
+  top: -16px;
+}
+.needle-wrapper .lines div {
+  background-color: #d2ccc6;
+  border-radius: 3px;
+}
+.needle-wrapper .lines .vertical {
+  width: 6px;
+  height: 50px;
+}
+.needle-wrapper .lines .horizontal {
+  width: 66px;
+  height: 6px;
+  position: absolute;
+  left: -46px;
+  bottom: -13px;
+  transform: rotate(-20deg);
+}
+
+.error{
+  font-size: 4.5rem;
+}
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.error {
+  color: #d2ccc6;
+  margin: 30px 0;
+}/*# sourceMappingURL=error.css.map */
