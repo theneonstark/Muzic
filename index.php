@@ -19,7 +19,7 @@
            <img src="img/logo.png" alt="">
             <div class="mid_content">
                 <a href="profile.php">Profile</a>
-                <a href="about.php">About</a>
+                <a href="mainabout.php" target="_blank">About</a>
                 <a href="music.php">Music</a>
                 <div class="input">
                     <input 
@@ -191,30 +191,30 @@
                     </div>
                     <div class="Brand_layout f_layout">
                         <h1>Brand</h1>
-                        <a href="about.php">About</a>
-                        <a href="">Profile</a>
-                        <a href="">Pricing</a>
-                        <a href="">Contact</a>
+                        <p class="link">About</p>
+                        <p class="link">Profile</p>
+                        <p class="link">Pricing</p>
+                        <p class="link">Contact</p>
                     </div>
                     <div class="Browser_layout f_layout">
                         <h1>Browser</h1>
-                        <a href="">Artist</a>
-                        <a href="">Releases</a>
-                        <a href="">Event</a>
-                        <a href="">Prodcast</a>
+                        <p class="link">Artist</p>
+                        <p class="link">Releases</p>
+                        <p class="link">Event</p>
+                        <p class="link">Prodcast</p>
                     </div>
                     <div class="Browser_layout_right f_layout">
-                        <a href=""></a>
-                        <a href="">News</a>
-                        <a href="">Store</a>
-                        <a href="">Video</a>
+                        <p></p>
+                        <p class="link">News</p>
+                        <p class="link">Store</p>
+                        <p class="link">Video</p>
                     </div>
                     <div class="Help_layout f_layout">
                         <h1>Help</h1>
-                        <a href="">Account & Billing</a>
-                        <a href="">Plan & Pricing</a>
-                        <a href="">Support</a>
-                        <a href="">Accessibility</a>
+                        <p class="link">Account & Billing</p>
+                        <p class="link">Plan & Pricing</p>
+                        <p class="link">Support</p>
+                        <p class="link">Accessibility</p>
                     </div>
                 </div>
             </section>
@@ -245,5 +245,25 @@
     </div>
     
     <script src="javascript/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            const links = document.querySelectorAll('.link');
+            links.forEach(function(elem,idx){
+                elem.addEventListener('click',(e)=>{
+                    console.log(e.target);
+                    
+                })
+            })
+            // $('.f_layout p').click(function(){
+            //     $.ajax({
+            //         url: "about.php",
+            //         success: function(res){
+            //             $('main').html(res);
+            //         }
+            //     })
+            // })
+        })
+    </script>
 </body>
 </html>
