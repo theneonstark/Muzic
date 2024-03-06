@@ -6,12 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/signup_login.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    
+<div class="form">
+		<form action="" method="POST">
+			<h1>Sign Up Guyz</h1>
+			<h3>First Name</h3>
+			<input 
+				type="text" 
+					name="fname" 
+						id="fname" 
+                        placeholder="Your Name"
+                        />
+			<h3>Last Name</h3>
+			<input 
+				type="text" 
+					name="lname" 
+						id="lname"
+                        placeholder="Lates Name"
+                         />
+			<h3>Email</h3>
+			<input 
+				type="email" 
+					name="mail" 
+						id="mail" 
+                        placeholder="Your Email"
+                        />
+			<h3>Password</h3>
+			<div class="pass">
+				<input 
+					type="Password" 
+						name="password" 
+							id="pass"
+                        placeholder="Enter Password"
+                             />
+				<i class="fa-regular fa-eye"></i>
+			</div>
+			<h3>Confirm Password</h3>
+			<input 
+				type="password" 
+					name="cpassword" 
+						id="confirm_pass"
+                        placeholder="Confirm Password"
+                         />
+                         <button id="sub">submit</button>
+			<!-- <input 
+				type="submit" 
+					name="sub" id="sub" /> -->
+			<h3>Already A Member ? <a href="login.php">Login Here</a></h3>
+		</form>
+	</div>
    
         <div class="container">
             <section class="profile_bar">
@@ -67,6 +115,7 @@
                 </div>
             </section>
         </div>
+
         <script src="javascript/main.js"></script>
     <script src="javascript/refresh.js"></script>
 </body>

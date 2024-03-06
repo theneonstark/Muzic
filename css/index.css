@@ -630,6 +630,7 @@ textarea {
     font-size: var(--fs-xl);
 }
 
+
 @media (max-width: 1200px) {
     html {
         font-size: 40%;
