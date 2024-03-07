@@ -39,8 +39,8 @@ $(document).ready(function(){
                               <span>4</span>
                             </div>
                           </div>
-                        </div>
-                        </div>
+                          </div>
+                          </div>
                         <div class="error">Uh oh! Looks like we've skipped a beat </div>
                         </a>
                         <section class="footer">
