@@ -25,10 +25,8 @@
                 <p class="link">Music</p>
                 
                 <div class="input">
-                    <input 
-                        type="text"
-                            placeholder="Artist, Music"/>
-                        <i class='bx bx-search' style='color:#ffffff' ></i>
+                    <i class='bx bx-search' style='color:#ffffff' ></i>
+                    <input  type="text" placeholder="What do you want to play?">
                     </div>
                 </div>
                 <div class="last_content">
@@ -56,7 +54,7 @@
                             <h1>Heading</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
                         </div>
-                    </div>
+</div>
                     </div>
                 <a href="contact.php">
                     <i class='bx bx-phone'></i>
@@ -124,6 +122,7 @@
             <i class='bx bx-chevron-left' id="prev"></i>
             <i class='bx bx-chevron-right' id="next"></i>
         </div>
+    <div class="new_container">
         <div class="container_head">
                 <div class="header">
                     <h1>New Music</h1>
@@ -132,7 +131,7 @@
                         <a href="music.php"><i class='bx bx-right-arrow-alt' id="arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+        </div>
             <section class="grid">
                 <?php
                     while($music_fetch=mysqli_fetch_array($query)){
@@ -151,6 +150,8 @@
                     }
                 ?>
             </section>
+    </div>
+    <div class="new_container">
             <div class="container_head">
                 <div class="header">
                     <h1>Artists</h1>
@@ -176,6 +177,7 @@
                     }
                 ?>
             </section>
+    </div>
             <section class="footer">
                 <div class="footer_layout">
                     <div class="contact_layout f_layout">

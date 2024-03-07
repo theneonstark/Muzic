@@ -16,6 +16,7 @@
     --main-bg: #1a1a1a;
     --fore-bg: #c0c0c0;
     --text-color: #e6af2e;
+    --bg-light:#5d5b5b9e;
     --max-padding: 30rem;
     --main-size: 8rem;
     --fore-size: 3rem;
@@ -155,28 +156,28 @@ body {
 }
 
 .head .mid_content .input input {
-    border-radius: 1.5rem;
-    color: #000;
+    border-radius: 4rem;
+    color: #fff;
     width: 30rem;
-    margin-left: var(--fore-size);
     font-weight: 600;
-    padding: 1.2rem 1rem;
+    padding: 1.8rem 3.2rem;
     font-size: 1.7rem;
-    background: var(--fore-bg);
+    background: var(--bg-light);
+}
+.head .mid_content .input input:hover{
+    box-shadow: 5px 2px 7px 0px #000000;
+}
+.head .mid_content .input i {
+    position: absolute;
+    left: 0.5rem;
+    cursor: pointer;
+    font-weight: 200;
 }
 
 .head img {
     width: 15rem;
     display: none;
 }
-
-.head .mid_content .input i {
-    position: absolute;
-    right: 0.5rem;
-    cursor: pointer;
-    font-weight: 600;
-}
-
 .head .last_content {
     display: flex;
     align-items: center;
@@ -200,14 +201,13 @@ body {
     background: linear-gradient(rgba(98,98,98,0.2),var(--main-bg));
     backdrop-filter: blur(10px);
     overflow-x: hidden;
+    
     animation: sutter 1.5s 1 ease-in-out;
-
 }
 
 .notic{
-    display: none; 
+    display: none;
 }
-
 .show_notify{
     display: block;
 }
@@ -219,9 +219,7 @@ body {
     50%{
         height: 50vh;
     }
-    100%{
-        height: 0;
-    }
+
 }
 
 .notification_box .notifications{
@@ -315,6 +313,11 @@ body {
     font-weight: 600;
 }
 
+.slider .buttons a:hover{
+    background: none;
+    border: 2px solid #fff;
+    color:antiquewhite;
+}
 .container .header {
     display: flex;
     align-items: center;
@@ -324,23 +327,38 @@ body {
 .container {
     position: relative;
 }
-
-.container .icon {
+.container .icon{
     position: absolute;
     z-index: 100;
     right: var(--main-size);
     bottom: var(--fore-size);
     font-size: var(--fs-xl);
     cursor: pointer;
+    padding: 1.2rem;
 }
+.container .icon i{
+    background: none;
+    border-radius: 50%;
+    color: #454648;
+}
+.container .icon i:hover{
+    border-radius: 50%;
+    background-color: #ffffff9c;
+}
+
 
 .container_head {
     margin-top: var(--main-size);
 }
 
-.container .header h1 {
+
+.new_container .header h1{
     font-weight: lighter;
     font-size: var(--fs-xl);
+}
+.new_container:hover .header h1{
+    color: #e6af2e;
+    font-size: var(--fs-sx);
 }
 
 .container .header .header_left {
