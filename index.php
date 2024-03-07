@@ -20,9 +20,10 @@
        <div class="head">
            <img src="img/logo.png" alt="">
             <div class="mid_content">
-                <a href="profile.php">Profile</a>
-                <a href="mainabout.php" target="_blank">About</a>
-                <a href="music.php">Music</a>
+            <p class="link">Profile</p>
+                <p class="link">About</p>
+                <p class="link">Music</p>
+                
                 <div class="input">
                     <input 
                         type="text"
@@ -30,9 +31,33 @@
                         <i class='bx bx-search' style='color:#ffffff' ></i>
                     </div>
                 </div>
-            <div class="last_content">
-                <i class='bx bx-search' id="search_icon"></i>
-                <i class='bx bx-notification'></i>
+                <div class="last_content">
+                    <i class='bx bx-search' id="search_icon"></i>
+                    <i class='bx bx-notification' id="notification"></i>
+                    <div class="notic">
+                    <div class="notification_box">
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                    </div>
+                    </div>
                 <a href="contact.php">
                     <i class='bx bx-phone'></i>
                 </a>
@@ -51,41 +76,9 @@
         <ul>
             <li>
                 <a href="sign up.php">
-                    <i class='bx bx-home-alt-2'></i>
+                    <i class='bx bx-home-alt-2' id="home"></i>
                     Home
                 </a>
-            </li>
-            <li>
-                <a href="artist.php">
-                    <i class='bx bx-user-voice'></i>
-                    Artist
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-news'></i>
-                    News
-                </a>
-            </li>
-            <li>
-                <a href="profile.php">
-                    <i class='bx bxs-user'></i>
-                    Profile
-                </a>
-                <ul>
-                    <li>
-                        <a href="profile.php">
-                            <i class='bx bx-cog'></i>
-                            Change Password
-                        </a>
-                    </li>
-                    <li>
-                        <a href="profile.php">
-                            <i class='bx bx-cog'></i>
-                            Setting
-                        </a>
-                    </li>
-                </ul>
             </li>
         </ul>
     </div>
@@ -136,7 +129,7 @@
                     <h1>New Music</h1>
                     <div class="header_left">
                         <p><a href="music.php">See All</a></p>
-                        <a href="music.php"><i class='bx bx-right-arrow-alt'></i></a>
+                        <a href="music.php"><i class='bx bx-right-arrow-alt' id="arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -193,23 +186,21 @@
                     </div>
                     <div class="Brand_layout f_layout">
                         <h1>Brand</h1>
-                        <p class="link">About</p>
-                        <p class="link">Profile</p>
+<div class="brand_p">
                         <p class="link">Pricing</p>
-                        <p class="link">Contact</p>
-                    </div>
-                    <div class="Browser_layout f_layout">
-                        <h1>Browser</h1>
                         <p class="link">Artist</p>
                         <p class="link">Releases</p>
                         <p class="link">Event</p>
                         <p class="link">Prodcast</p>
+</div>
                     </div>
-                    <div class="Browser_layout_right f_layout">
-                        <p></p>
-                        <p class="link">News</p>
-                        <p class="link">Store</p>
-                        <p class="link">Video</p>
+                    <div class="Browser_layout f_layout">
+                        <h1>Contact us:-</h1>
+                        <a href="https://m.facebook.com/theneonstark/"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/igneonstark/?hl=en"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://github.com/theneonstark"><i class='bx bxl-github'></i></a>
+                        <a href="https://twitter.com/neonstarkYT"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://in.linkedin.com/in/mohdshahidk"><i class='bx bxl-linkedin'></i></a>
                     </div>
                 </div>
             </section>

@@ -282,3 +282,10 @@ nxt_btn.addEventListener('click', nxtslide);
 prv_btn.addEventListener('click', prevslide);
 
 start();
+
+const noticebtn=document.getElementById("notification");
+const noticbox=document.querySelector(".notic");
+noticebtn.onclick=()=>{
+    noticebtn.classList.toggle('bx-notification-off');
+    noticbox.classList.toggle('show_notify');
+}
