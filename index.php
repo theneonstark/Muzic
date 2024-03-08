@@ -56,9 +56,6 @@
                         </div>
 </div>
                     </div>
-                <a href="contact.php">
-                    <i class='bx bx-phone'></i>
-                </a>
                 <a href="logout.php">
                     <i class='bx bx-log-out-circle' id="logout_btn"></i>
                 </a>
@@ -194,6 +191,7 @@
                         <p class="link">Releases</p>
                         <p class="link">Event</p>
                         <p class="link">Prodcast</p>
+                        <p class="link">Contact</p>
 </div>
                     </div>
                     <div class="Browser_layout f_layout">

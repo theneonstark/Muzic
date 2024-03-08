@@ -9,7 +9,6 @@
     border: none;
     font-family: sans-serif;
     color: var(--fore-bg);
-    transition: all 0.2s linear;
 }
 
 :root {
@@ -160,7 +159,7 @@ body {
     color: #fff;
     width: 30rem;
     font-weight: 600;
-    padding: 1.8rem 3.2rem;
+    padding: 1.2rem 1rem;
     font-size: 1.7rem;
     background: var(--bg-light);
 }
@@ -169,9 +168,9 @@ body {
 }
 .head .mid_content .input i {
     position: absolute;
-    left: 0.5rem;
+    right: 0.5rem;
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .head img {
@@ -191,36 +190,23 @@ body {
     font-weight: 400;
 }
 
+.notic{
+    display: none;
+}
+
 .notification_box{
     position: absolute;
     z-index: 300;
     right: 50%;
     top: 100%;
     width: 35rem;
+    height: 50vh;
     border-radius: 2rem;
     background: linear-gradient(rgba(98,98,98,0.2),var(--main-bg));
     backdrop-filter: blur(10px);
     overflow-x: hidden;
-    
-    animation: sutter 1.5s 1 ease-in-out;
 }
 
-.notic{
-    display: none;
-}
-.show_notify{
-    display: block;
-}
-
-@keyframes sutter{
-    0%{
-        height: 0;
-    }
-    50%{
-        height: 50vh;
-    }
-
-}
 
 .notification_box .notifications{
     background: red;
@@ -311,6 +297,8 @@ body {
     border-radius: 1.5rem;
     color: #c0c0c0;
     font-weight: 600;
+    border: 2px solid transparent;
+    transition: all 0.8 linear;
 }
 
 .slider .buttons a:hover{
@@ -355,6 +343,7 @@ body {
 .new_container .header h1{
     font-weight: lighter;
     font-size: var(--fs-xl);
+    transition: 0.4s;
 }
 .new_container:hover .header h1{
     color: #e6af2e;
@@ -550,6 +539,30 @@ textarea {
     align-items: center;
     gap: var(--small-size);
     font-size: var(--fs-sm);
+}
+
+.setting_container form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    justify-content: center;
+    /* width: 12%; */
+    font-size: var(--fore-size);
+}
+
+.setting_container form input[type="number"]::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+.setting_container form input{
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: var(--small-size);
+    padding: 1rem 1rem;
+    background: transparent;
+    color: var(--fore-bg);
 }
 
 .about_bar h1 {

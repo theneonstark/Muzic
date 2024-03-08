@@ -283,9 +283,27 @@ prv_btn.addEventListener('click', prevslide);
 
 start();
 
-const noticebtn=document.getElementById("notification");
-const noticbox=document.querySelector(".notic");
-noticebtn.onclick=()=>{
-    noticebtn.classList.toggle('bx-notification-off');
-    noticbox.classList.toggle('show_notify');
-}
+// const noticebtn=document.getElementById("notification");
+// const noticbox=document.querySelector(".notic > div");
+// console.log(noticbox)
+// let sutter = 0;
+// noticebtn.onclick=()=>{
+    //     sutter++;
+    //     if(sutter == 1){
+//         noticbox.classList.remove('notification_box_up');
+//         noticbox.classList.add('notification_box_down')
+//     }else{
+    //         noticbox.classList.remove('notification_box_down');
+    //         noticbox.classList.add('notification_box_up');
+    //         sutter=0;
+    //     }
+    // }
+    
+    $(document).ready(function(){
+        $('.notic > div').slideUp(10);
+        $('#notification').click(function(){
+            $('#notification').toggleClass('bx-notification-off');
+            $('.notic > div').slideToggle('slow');
+        $('.notic').css("display", "block");
+    })
+})
