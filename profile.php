@@ -37,12 +37,18 @@
                 </div>
                 <div class="setting_container">
                     <form action="">
-                       <div class="from_user"><label >User name:-</label><input type="text" placeholder="Username"></div>
-                       <div class="from_user"><label >Bio:-</label><input type="text" placeholder="what about you"></div>
-                       <div class="from_user"><label >Your name:-</label><input type="text" placeholder="Enter name"></div>
-                       <div class="from_user"><label >Email:-</label><input type="Email" placeholder="Email"></div>
-                       <div class="from_user"><label >Password:-</label><input type="password" placeholder="Password"></div>
-                       <div class="from_user"><label >Phone number:-</label><input type="number" placeholder="Number"></div>
+                    <div class="update_form">
+                       <div class="from_user">
+                        <label >User name:-</label>
+                       <input type="text" placeholder="Username">
+                      <label>Bio:-</label><input type="text" placeholder="what about you"></div>
+                       <div class="from_user"><label >Your name:-</label><input type="text" placeholder="Enter name">
+                       <label >Email:-</label><input type="Email" placeholder="Email"></div>
+                       <div class="from_user"><label >Password:-</label><input type="password" placeholder="Password">
+                       <label >Phone number:-</label><input type="number" placeholder="Number"></div>
+                       </div>
+                       <input type="submit" value="Edit" >
+                       </div>
                     </form>
                 </div>
             </section>
