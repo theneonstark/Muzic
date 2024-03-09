@@ -44,7 +44,7 @@
 							id="pass"
                         placeholder="Enter Password"
                              />
-				<i class="fa-regular fa-eye"></i>
+                             <i class='bx bx-show' id="eye" onclick="eye()"></i>
 			</div>
 			<h3>Confirm Password</h3>
 			<input 
@@ -118,5 +118,22 @@
 
         <script src="javascript/main.js"></script>
     <script src="javascript/refresh.js"></script>
+    <script>
+        let eyes=document.getElementById("eye")
+        let input=document.getElementById("pass")
+        let inputype=document.getElementById("confirm_pass")
+let eye=()=>{
+    eyes.classList.toggle("bx-show");
+    eyes.classList.toggle("bx-hide");
+    if(input.type== "password" && inputype.type=="password"){
+        input.setAttribute("type","text")
+        inputype.setAttribute("type","text")
+    }else{
+        input.setAttribute("type","password")
+        inputype.setAttribute("type","password")
+    }
+    
+}
+    </script>
 </body>
 </html>

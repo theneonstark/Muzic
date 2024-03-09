@@ -9,15 +9,13 @@ html{
 	overflow: hidden;
 }
 .form{
-	/* height: 100vh; */
 	width: 100vw;
 	backdrop-filter: blur(5px);
 	display: flex;
 	justify-content: center;
 	position: absolute;
 	z-index: 100;
-	top: 15%;
-	/* align-items: center; */
+
 }
 
 .form form {
@@ -65,8 +63,9 @@ input{
 .form .pass i{
 	position: absolute;
 	right: 0;
+	cursor: pointer;
 	top: 0.25rem;
-	font-size: 1.5rem;
+	font-size: 3.5rem;
 }
 .form #sub{
 	height: 4rem;

@@ -282,3 +282,13 @@ nxt_btn.addEventListener('click', nxtslide);
 prv_btn.addEventListener('click', prevslide);
 
 start();
+    
+    $(document).ready(function(){
+        $('.notic > div').slideUp(10);
+        $('#notification').click(function(){
+            $('#notification').toggleClass('bx-notification-off');
+            $('.notic > div').slideToggle('slow');
+        $('.notic').css("display", "block");
+    })
+    
+})
