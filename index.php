@@ -70,7 +70,7 @@
     <div class="sidebar_nav">
         <ul>
             <li>
-                <a href="sign up.php">
+                <a href="index.php">
                     <i class='bx bx-home-alt-2' id="home"></i>
                     Home
                 </a>

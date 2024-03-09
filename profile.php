@@ -36,16 +36,21 @@
                     </div>
                 </div>
                 <div class="setting_container">
+                    <?php 
+                    $con = mysqli_connect("localhost","root","","users");
+                        $query = mysqli_query($con, "select * from user_data");
+                        $exe = mysqli_fetch_array($query)
+                    ?>
                     <form action="">
                     <div class="update_form">
                        <div class="from_user">
                         <label >User name:-</label>
-                       <input type="text" placeholder="Username">
-                      <label>Bio:-</label><input type="text" placeholder="what about you"></div>
-                       <div class="from_user"><label >Your name:-</label><input type="text" placeholder="Enter name">
-                       <label >Email:-</label><input type="Email" placeholder="Email"></div>
-                       <div class="from_user"><label >Password:-</label><input type="password" placeholder="Password">
-                       <label >Phone number:-</label><input type="number" placeholder="Number"></div>
+                       <input type="text" placeholder="Username" value="">
+                      <label>Bio:-</label><input type="text" placeholder="what about you" value=""></div>
+                       <div class="from_user"><label >Your name:-</label><input type="text" placeholder="Enter name" value="<?php echo $exe['first_name']?>">
+                       <label >Email:-</label><input type="Email" placeholder="Email" value="<?php echo $exe['email']?>"></div>
+                       <div class="from_user"><label >Password:-</label><input type="password" placeholder="Password" value="<?php echo $exe['password']?>">
+                       <label >Phone number:-</label><input type="number" placeholder="Number" value=""></div>
                        </div>
                        <input type="submit" value="Edit" >
                        </div>
