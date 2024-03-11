@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile <?php echo $_SESSION['u_name']?></title>
     <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                     </div>
                     </div>
                     <div class="features">
-                        <a href="#">Setting</a>
+                        <p id="setting_btn">Setting</p>
                     </div>
                     <div class="signing_off">
                         <a href="#">Sign Out</a>
@@ -88,6 +89,7 @@
                 </div>
             </section>
         </div>
+    <script src="javascript/profile.js"></script>
 </body>
 </html>
 <?php
