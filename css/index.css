@@ -661,6 +661,7 @@ textarea {
     color: var(--text-color);
     text-decoration: underline;
 }
+
 .wide_player {
     min-height: 25vh;
     min-width: 100%;
@@ -674,6 +675,10 @@ textarea {
     background-color: red;
     transform: translateY(100%);
     display: none;
+}
+
+.wide_player .duration{
+    display: flex;
 }
 
 .show {

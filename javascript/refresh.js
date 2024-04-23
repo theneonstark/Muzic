@@ -1,7 +1,6 @@
 $(document).ready(function(){
     const links = document.querySelectorAll('.link');
     let err = document.getElementById('err');
-    console.log(err)
     links.forEach(function(elem,idx){
         elem.id = `link${idx}`;
         elem.addEventListener('click',(e)=>{

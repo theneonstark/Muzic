@@ -225,7 +225,11 @@
                     <i class='bx bx-play-circle' id="wplayer_playbtn"></i>
                     <i class='bx bx-skip-next' id="wplayer_nxtbtn"></i>
                 </div>
-                <input type="range">
+                <div class="duration">
+                    <h3 id="play_duration">00:00</h3>
+                    <input type="range" value="0" id="player_duration" min="0" max="100">
+                    <h3 id="final_duration">00:00</h3>
+                </div>
             </div>
         </div>
     </div>
