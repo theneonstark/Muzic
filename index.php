@@ -20,9 +20,9 @@
        <div class="head">
            <img src="img/logo.png" alt="">
             <div class="mid_content">
-            <p class="link">Profile</p>
-                <p class="link">About</p>
-                <p class="link">Music</p>
+            <a href="profile.php">Profile</a>
+                <a href="about.php">About</a>
+                <a href="music.php">Music</a>
                 
                 <div class="input">
                     <i class='bx bx-search' style='color:#ffffff' ></i>
@@ -230,7 +230,6 @@
         </div>
     </div>
     
-    <script src="javascript/music.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/refresh.js"></script>
 </body>

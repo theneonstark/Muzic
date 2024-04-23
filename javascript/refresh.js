@@ -14,10 +14,6 @@ $(document).ready(function(){
                     url: `${link_name}.php`,
                     success: function(res){
                         $('main').html(res);
-                        if($('script')[1].src == "http://localhost/Muzic/javascript/music.js"){
-                            $('script')[2].src = "";
-                        }
-                        console.log($('script')[5])
                     },
                     error: function() {
                         $('main').html(`<a href="index.php" class="back_to_home">

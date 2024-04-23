@@ -15,6 +15,84 @@
 </head>
 
 <body>
+<header>
+       <div class="head">
+           <img src="img/logo.png" alt="">
+            <div class="mid_content">
+            <a href="profile.php">Profile</a>
+                <a href="about.php">About</a>
+                <a href="music.php">Music</a>
+                
+                <div class="input">
+                    <i class='bx bx-search' style='color:#ffffff' ></i>
+                    <input  type="text" placeholder="What do you want to play?">
+                    </div>
+                </div>
+                <div class="last_content">
+                    <i class='bx bx-search' id="search_icon"></i>
+                    <i class='bx bx-notification' id="notification"></i>
+                    <div class="notic">
+                    <div class="notification_box">
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+                        <div class="notifications">
+                            <h1>Heading</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto pariatur ratione reiciendis deleniti.</p>
+                        </div>
+</div>
+                    </div>
+                <a href="logout.php">
+                    <i class='bx bx-log-out-circle' id="logout_btn"></i>
+                </a>
+                <i class='bx bx-menu-alt-right' id="menu_icon"></i>
+            </div>
+        </div>
+   </header>
+   <div class="sidebar">
+    <div class="logo">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="sidebar_nav">
+        <ul>
+            <li>
+                <a href="index.php">
+                    <i class='bx bx-home-alt-2' id="home"></i>
+                    Home
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar_player">
+        <div class="top">
+            <img src="img/pngegg.png" alt="Image Not Found" id="player_img">
+            <h4></h4>
+        </div>
+        <div class="middle">
+            <i class='bx bx-skip-previous' id="player_prevbtn"></i>
+            <i class='bx bx-play-circle' id="player_playbtn"></i>
+            <i class='bx bx-skip-next' id="player_nxtbtn"></i>
+        </div>
+        <div class="last">
+            <i class='bx bx-volume-full' id="volume_icon"></i>
+            <input type="range" id="volume" min="0" max="100" value="100">
+        </div>
+    </div>
+</div>
+<main class="main">
         <div class="container">
             <h1>Musics</h1>
             <section class="music_bar grid">
@@ -97,7 +175,7 @@
             </div>
         </div>
     </div>
-    <script src="javascript/music.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
 
 </html>
