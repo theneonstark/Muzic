@@ -1,6 +1,5 @@
 // fetch("http://localhost/Muzic/fetch.php").then(res => res.json())
 //     .then((result)=>{
-//         console.log(result[0].File_name);
 //     })
 
 let main_index = 0,
@@ -57,7 +56,6 @@ wplayer_playbtn.addEventListener("click", () => {
   }
 });
 
-// console.log(music_card_btn);
 
 async function fetch_data() {
   const data = await fetch("http://localhost/Muzic/fetch.php");
@@ -71,7 +69,6 @@ async function fetch_data() {
       singerIndex = e.target = name[index].Singer_name;
       songIndex = e.target = name[index].File_name;
       imgIndex = e.target = name[index].img_name;
-      // console.log(songIndex);
       music_details.innerText = dataIndex;
       wmusic_details.innerText = dataIndex;
       singer_name.innerText = singerIndex;
@@ -86,9 +83,6 @@ async function fetch_data() {
         final_duration.innerHTML = dura;
         audio.addEventListener("timeupdate", () => {
           progress = parseInt((audio.currentTime / audio.duration) * 100);
-          console.log(Math.floor(audio.currentTime / 60));
-          // console.log(audio.currentTime);
-          // console.log(audio.duration);
           let timeline = Math.round(parseInt(audio.currentTime));
           play_duration.innerHTML = Math.round(parseInt(audio.currentTime))
           
@@ -110,14 +104,7 @@ async function fetch_data() {
         player_duration.addEventListener("input", () => {
           audio.currentTime = (player_duration.value * audio.duration) / 100;
         });
-        //     player_duration.max = parseInt(dura);
-        //     console.log(player_duration.max)
-        // player_duration.addEventListener('input',()=>{
-        //         play_duration.value = audio_dur;
-        // })
       });
-      // idName.classList.remove("bx-play-circle");
-      // idName.classList.add("bx-pause-circle");
       player_playbtn.classList.remove("bx-play-circle");
       wplayer_playbtn.classList.remove("bx-play-circle");
       player_playbtn.classList.add("bx-pause-circle");
@@ -213,7 +200,6 @@ async function fetch_data() {
 }
 volumeInput.addEventListener("input", (event) => {
   const volumeValue = volumeInput.value / 100;
-  // console.log(volumeValue);
   audio.volume = volumeValue;
   if (volumeValue == 0) {
     volumeIcon.classList.remove("bx-volume-full");
@@ -298,7 +284,6 @@ const prevslide = () => {
 
 container.addEventListener("mouseenter", () => {
   clearInterval(slider_slides);
-  console.log("hello");
 });
 
 container.addEventListener("mouseleave", start);
@@ -316,10 +301,3 @@ $(document).ready(function () {
     $(".notic").css("display", "block");
   });
 });
-
-function get_duration(dur) {
-  let min = "0" + Math.floor(dur / 60);
-  let sec = "0" + Math.floor(dur - min * 60);
-  let dura = min.substr(-2) + ":" + sec.substr(-2);
-  console.log(dura);
-}
