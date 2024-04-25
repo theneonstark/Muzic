@@ -114,7 +114,7 @@ if (isset($_SESSION['a_email'])) {
     header('location:login.php');
 }
 ?>
-<script src="javascript/main.js"></script>
+<script src="javascript/admin.js"></script>
 </body>
 
 </html>

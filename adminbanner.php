@@ -117,7 +117,7 @@
         window.history.replaceState( null, null, window.location.href );
         }
     </script>
-    <script src="javascript/main.js"></script>
+    <script src="javascript/admin.js"></script>
     <?php
         }else{
             header('location:login.php');

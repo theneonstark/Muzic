@@ -1,17 +1,3 @@
-let image = document.getElementById("Image"),
-  song = document.getElementById("Music");
-
-let imageTxt = document.getElementById("image_detail"),
-  songtxt = document.getElementById("song_detail");
-// console.log(image,song);
-
-song = onchange = () => {
-  let inputImage = document.getElementById("Image").files[0];
-  imageTxt.innerText = inputImage.name;
-  let inputSong = document.getElementById("Music").files[0];
-  songtxt.innerText = inputSong.name;
-};
-
 // fetch("http://localhost/Muzic/fetch.php").then(res => res.json())
 //     .then((result)=>{
 //         console.log(result[0].File_name);
@@ -103,10 +89,25 @@ async function fetch_data() {
           console.log(Math.floor(audio.currentTime / 60));
           // console.log(audio.currentTime);
           // console.log(audio.duration);
-          console.log(min)
+          let timeline = Math.round(parseInt(audio.currentTime));
+          play_duration.innerHTML = Math.round(parseInt(audio.currentTime))
+          
+          if(timeline <= 9){
+            play_duration.innerHTML = `00:0${timeline}`;
+          }else{
+            play_duration.innerHTML = `00:${timeline}`;
+            if(timeline >= 60){
+              let a = Math.floor(audio.currentTime/60);
+              let b = Math.floor(audio.currentTime - a * 60)
+              play_duration.innerHTML = `0${a}:0${b}`;
+              if(b >= 10){
+                play_duration.innerHTML = `0${a}:${b}`;
+              }
+            }
+          }
           player_duration.value = progress;
         });
-        player_duration.addEventListener("change", () => {
+        player_duration.addEventListener("input", () => {
           audio.currentTime = (player_duration.value * audio.duration) / 100;
         });
         //     player_duration.max = parseInt(dura);
